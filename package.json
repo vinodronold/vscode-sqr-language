@@ -1,0 +1,31 @@
+{
+    "name": "vscode-sqr-langauge",
+    "displayName": "vscode-sqr-langauge",
+    "description": "Syntax Highlighting and Formatting SQR Programs",
+    "version": "0.0.1",
+    "publisher": "vinodronold",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Languages",
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:sqr"
+    ],
+    "main": "./out/extension",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
